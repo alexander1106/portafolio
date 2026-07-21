@@ -1,0 +1,42 @@
+.page-loader {
+	--loader-accent: #22c55e;
+	--loader-accent-soft: rgba(34, 197, 94, 0.2);
+	--loader-accent-glow: rgba(34, 197, 94, 0.25);
+	position: fixed;
+	inset: 0;
+	z-index: 9999;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 1rem;
+	background: #000000;
+	color: #dcfce7;
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.spinner {
+	width: 68px;
+	height: 68px;
+	border-radius: 50%;
+	border: 6px solid var(--loader-accent-soft);
+	border-top-color: var(--loader-accent);
+	animation: spin 0.9s linear infinite;
+	box-shadow: 0 0 25px var(--loader-accent-glow);
+}
+
+.page-loader p {
+	margin: 0;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	font-size: 0.9rem;
+}
+
+@keyframes spin {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}

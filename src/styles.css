@@ -1,1 +1,112 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* ====================================================
+   DESIGN TOKENS — usados por navbar, footer y secciones
+==================================================== */
+:root {
+  --accent: #22c55e;
+  --accent-strong: #16a34a;
+  --accent-soft: #86efac;
+  --accent-surface: rgba(34, 197, 94, 0.1);
+  --accent-border: rgba(34, 197, 94, 0.18);
+  --accent-glow: rgba(34, 197, 94, 0.25);
+
+  --bg-base: #020617;
+  --bg-surface: rgba(8, 18, 38, 0.92);
+  --bg-surface-soft: rgba(15, 23, 42, 0.72);
+
+  --text-primary: #f8fafc;
+  --text-muted: #94a3b8;
+  --text-faint: #64748b;
+
+  --border-subtle: #1e293b;
+
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 22px;
+  --radius-pill: 999px;
+
+  --font-base: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --transition-base: 0.3s ease;
+}
+
+body.light-theme {
+  --accent: #16a34a;
+  --accent-strong: #15803d;
+  --accent-soft: #166534;
+  --accent-surface: rgba(34, 197, 94, 0.08);
+  --accent-border: rgba(34, 197, 94, 0.25);
+  --accent-glow: rgba(34, 197, 94, 0.18);
+
+  --bg-base: #ffffff;
+  --bg-surface: #ffffff;
+  --bg-surface-soft: #f8fafc;
+
+  --text-primary: #0f172a;
+  --text-muted: #334155;
+  --text-faint: #64748b;
+
+  --border-subtle: #cbd5e1;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #030712;
+  color: #000000;
+  min-height: 100vh;
+  font-family: var(--font-base);
+  transition: background-color 0.35s ease, color 0.35s ease;
+}
+
+
+/* GRID TECNOLÓGICO */
+
+body::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px);
+
+  background-size: 50px 50px;
+
+  opacity: .3;
+}
+
+body::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background:
+    radial-gradient(circle at 15% 20%,
+      rgba(34,197,94,.18),
+      transparent 30%),
+
+    radial-gradient(circle at 85% 70%,
+      rgba(34,197,94,.18),
+      transparent 35%);
+
+  pointer-events: none;
+}
+
+
+#about,
+#skills,
+#experience,
+#projects,
+#certifications,
+#contact {
+  scroll-margin-top: 90px;
+}

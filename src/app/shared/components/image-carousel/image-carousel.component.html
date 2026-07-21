@@ -1,0 +1,28 @@
+<div class="carousel" *ngIf="images.length">
+
+  <div class="carousel-track">
+    <img [src]="images[currentIndex]" alt="Captura del proyecto">
+  </div>
+
+  <ng-container *ngIf="images.length > 1">
+
+    <button class="carousel-arrow prev" type="button" (click)="prev()" aria-label="Anterior">
+      <i class="fas fa-chevron-left"></i>
+    </button>
+
+    <button class="carousel-arrow next" type="button" (click)="next()" aria-label="Siguiente">
+      <i class="fas fa-chevron-right"></i>
+    </button>
+
+    <div class="carousel-dots">
+      <span
+        *ngFor="let img of images; let i = index"
+        class="carousel-dot"
+        [class.active]="i === currentIndex"
+        (click)="goTo(i)">
+      </span>
+    </div>
+
+  </ng-container>
+
+</div>

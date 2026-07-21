@@ -1,0 +1,365 @@
+<section class="timeline-section" id="experience">
+
+  <div class="section-header">
+
+    <div class="stack-badge">
+      EXPERIENCIA
+    </div>
+
+    <h2>
+      Experiencia <span class="color">Laboral</span>
+    </h2>
+
+    <p>
+      <span class="dot"></span>
+      Experiencia en desarrollo de software, soporte técnico e infraestructura
+      <span class="dot"></span>
+    </p>
+
+  </div>
+
+  <div class="projects-grid">
+ <!-- OTI -->
+    <article class="project-card">
+      <div class="flex">
+        <div class="timeline-icon">
+          <img src="/assets/oti.png" alt="">
+        </div>
+        <div>
+          <div class="timeline-date">
+            Ago 2025 - Jul 2026
+          </div>
+
+          <h3>
+            Practicante de Sistemas
+            <span class="color">OTI UNSM</span>
+          </h3>
+        </div>
+      </div>
+
+      <app-image-carousel [images]="otiImages"></app-image-carousel>
+
+      <ul>
+        <li>Desarrollé un sistema de inventario para el control de activos de la Facultad de Ingeniería de Sistemas e Informática.</li>
+        <li>Desarrollé íntegramente un sistema de encuestas de seguimiento a egresados.</li>
+        <li>Digitalicé procesos administrativos mediante un módulo de servicios de consulta (becas, antecedentes judiciales)</li>
+        <li>Brindé soporte técnico (Help Desk) al sistema administrativo del comedor universitario, resolviendo incidencias relacionadas con pagos, registros y acceso al sistema.</li>
+      </ul>
+
+      <div class="tech-tags">
+        <span>.NET</span>
+        <span>C#</span>
+        <span>SQL Server</span>
+        <span>Java</span>
+        <span>Angular</span>
+      </div>
+
+    </article>
+    <!-- SELVA FOOD -->
+    <article class="project-card">
+      <div class="flex">
+        <div class="timeline-icon">
+          <img src="/assets/jj.png" alt="">
+        </div>
+        <div>
+          <div class="timeline-date">
+            Feb 2025 - Abr 2026 | JJ Ingenieros
+          </div>
+
+          <h3>
+            Practicante de Sistemas
+            <span class="color">Selva Food</span>
+          </h3>
+        </div>
+      </div>
+
+      <app-image-carousel [images]="selvaFoodImages"></app-image-carousel>
+
+      <ul>
+        <li>Optimización de la gestión de pedidos y productos.</li>
+        <li>Implementación de notificaciones en tiempo real con Firebase.</li>
+        <li>Participé en el despliegue de servicios en Azure, asegurando disponibilidad y continuidad.</li>
+        <li>Estandaricé entornos de desarrollo mediante Docker, facilitando despliegues consistentes.</li>
+      </ul>
+
+      <div class="tech-tags">
+        <span>Angular</span>
+        <span>Java</span>
+        <span>Spring Boot</span>
+        <span>Firebase</span>
+        <span>MySQL</span>
+        <span>Azure</span>
+        <span>Docker</span>
+      </div>
+
+    </article>
+
+    <!-- INFRATECH -->
+    <article class="project-card">
+
+      <div class="flex">
+        <div class="timeline-icon">
+          <img src="/assets/infratech.png" alt="">
+        </div>
+        <div>
+          <div class="timeline-date">
+            Dic 2025 - Feb 2026 | Tarapoto
+          </div>
+
+          <h3>
+            Practicante de Sistemas
+            <span class="color">InfraTech</span>
+          </h3>
+        </div>
+      </div>
+
+      <app-image-carousel [images]="infratechImages"></app-image-carousel>
+
+      <ul>
+        <li>Ejecuté la migración y configuración de sistemas operativos (Linux a Windows 11 Pro) en múltiples equipos</li>
+        <li>Participé en procesos de homologación tecnológica en sedes de Inkafarma.</li>
+        <li>Configuré entornos de trabajo asegurando continuidad operativa y compatibilidad de software.</li>
+        <li>Brindé soporte técnico resolviendo incidencias en hardware y software.</li>
+      </ul>
+
+      <div class="tech-tags">
+        <span>Windows 11</span>
+        <span>Linux</span>
+        <span>Redes</span>
+        <span>Soporte Técnico</span>
+      </div>
+
+    </article>
+
+
+
+  </div>
+
+</section>
+
+<!-- ==========================
+     PROYECTOS DESTACADOS
+========================== -->
+
+<section class="projects-section" id="projects">
+
+  <div class="section-header">
+    <div class="stack-badge">
+      PROYECTOS
+    </div>
+
+    <h2>
+      Proyectos <span class="color">Destacados</span>
+    </h2>
+
+    <p>
+      <span class="dot"></span>
+      Soluciones desarrolladas en inteligencia artificial y software empresarial
+      <span class="dot"></span>
+    </p>
+  </div>
+
+  <div class="projects-grid">
+
+    <!-- BIOHEART -->
+    <article class="project-card">
+
+      @if (!bioheartImages.length) {
+        <div class="timeline-icon">
+          <i class="fas fa-heartbeat"></i>
+        </div>
+      }
+
+      <h3>BIOHEART</h3>
+
+      <app-image-carousel class="project-carousel" [images]="bioheartImages"></app-image-carousel>
+
+      <p>
+        Detección automática de arritmias con Deep Learning y señales ECG.
+      </p>
+
+      <ul>
+        <li>Clasificación inteligente de señales cardíacas.</li>
+        <li>Integración con app móvil vía API REST.</li>
+        <li>Despliegue en Google Cloud.</li>
+      </ul>
+
+      <div class="tech-tags">
+        <span>Python</span>
+        <span>TensorFlow</span>
+        <span>Flutter</span>
+        <span>REST API</span>
+        <span>Google Cloud</span>
+      </div>
+
+    </article>
+
+    <!-- PLANIA -->
+    <article class="project-card">
+
+      @if (!planiaImages.length) {
+        <div class="timeline-icon">
+          <i class="fas fa-seedling"></i>
+        </div>
+      }
+
+      <h3>PLANIA</h3>
+
+      <app-image-carousel class="project-carousel" [images]="planiaImages"></app-image-carousel>
+
+      <p>
+        App móvil para identificar especies vegetales con visión artificial.
+      </p>
+
+      <ul>
+        <li>Modelo de clasificación con ResNet50.</li>
+        <li>Backend de procesamiento de imágenes.</li>
+        <li>Despliegue en Google Cloud.</li>
+      </ul>
+
+      <div class="tech-tags">
+        <span>Python</span>
+        <span>ResNet50</span>
+        <span>FastAPI</span>
+        <span>Flutter</span>
+        <span>Google Cloud</span>
+      </div>
+
+      <a
+        class="deploy-btn"
+        href="https://github.com/alexander1106/frontend-plania"
+        target="_blank"
+        rel="noopener noreferrer">
+        <svg class="icon-github" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38C13.71 14.53 16 11.54 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+        Ver Código
+      </a>
+
+    </article>
+
+    <!-- ENCUESTAS EGRESADOS -->
+    <article class="project-card">
+
+      @if (!encuestasImages.length) {
+        <div class="timeline-icon">
+          <i class="fas fa-user-graduate"></i>
+        </div>
+      }
+
+      <h3>Sistema de Encuestas a Egresados</h3>
+
+      <app-image-carousel class="project-carousel" [images]="encuestasImages"></app-image-carousel>
+
+      <p>
+        Plataforma para la OTI - UNSM que recopila y analiza el seguimiento a egresados.
+      </p>
+
+      <ul>
+        <li>Diseño de base de datos desde cero.</li>
+        <li>Desarrollo full stack, de punta a punta.</li>
+        <li>Módulo de consulta de resultados y reportes.</li>
+      </ul>
+
+      <div class="tech-tags">
+        <span>.NET</span>
+        <span>C#</span>
+        <span>SQL Server</span>
+        <span>Angular</span>
+      </div>
+
+      <a
+        class="deploy-btn"
+        href="https://encuestauseil.unsm.edu.pe"
+        target="_blank"
+        rel="noopener noreferrer">
+        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        Ver Demo
+      </a>
+
+    </article>
+
+    <!-- SISTEMA DE INVENTARIO -->
+    <article class="project-card">
+
+      @if (!inventarioImages.length) {
+        <div class="timeline-icon">
+          <i class="fas fa-boxes-stacked"></i>
+        </div>
+      }
+
+      <h3>Sistema de Inventario </h3>
+
+      <app-image-carousel class="project-carousel" [images]="inventarioImages"></app-image-carousel>
+
+      <p>
+Sistema para el control, administración y seguimiento de los activos de las facultades de la Universidad Nacional de San Martín (UNSM), desarrollado para la OTI.      </p>
+
+      <ul>
+        <li>Registro y control de activos institucionales.</li>
+        <li>Consulta y actualización en tiempo real.</li>
+        <li>Backend robusto con .NET y SQL Server.</li>
+      </ul>
+
+      <div class="tech-tags">
+        <span>.NET</span>
+        <span>C#</span>
+        <span>SQL Server</span>
+        <span>Angular</span>
+      </div>
+
+      <a
+        class="deploy-btn"
+        href="https://github.com/alexander1106/Inventario-UNSM"
+        target="_blank"
+        rel="noopener noreferrer">
+        <svg class="icon-github" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38C13.71 14.53 16 11.54 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+        Ver Código
+      </a>
+
+    </article>
+
+    <!-- ERP -->
+    <article class="project-card">
+
+      @if (!erpImages.length) {
+        <div class="timeline-icon">
+          <i class="fas fa-briefcase"></i>
+        </div>
+      }
+
+      <h3>Sistema Administrativo para PYMES</h3>
+
+      <app-image-carousel [images]="erpImages"></app-image-carousel>
+
+      <p>
+        Plataforma empresarial para gestión de ventas, compras, caja y usuarios.
+      </p>
+
+      <ul>
+        <li>Autenticación basada en roles.</li>
+        <li>Módulos administrativos completos.</li>
+        <li>Backend escalable con Spring Boot.</li>
+        <li>Control de versiones con GitHub.</li>
+      </ul>
+
+      <div class="tech-tags">
+        <span>Angular</span>
+        <span>TypeScript</span>
+        <span>Java</span>
+        <span>Spring Boot</span>
+        <span>MySQL</span>
+      </div>
+
+      <a
+        class="deploy-btn"
+        href="https://github.com/alexander1106/backend-sistema-integral-cerro-verde"
+        target="_blank"
+        rel="noopener noreferrer">
+        <svg class="icon-github" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38C13.71 14.53 16 11.54 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+        Ver Código
+      </a>
+
+    </article>
+
+  </div>
+
+</section>

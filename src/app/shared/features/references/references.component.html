@@ -1,0 +1,35 @@
+<section class="references" id="references">
+
+  <div class="section-header">
+
+    <div class="stack-badge">
+      RESPALDO PROFESIONAL
+    </div>
+
+    <h2>Referencias <span class="color">Laborales</span></h2>
+
+    <p>
+      <span class="dot"></span>
+      Personas que pueden dar fe de mi desempeño profesional
+      <span class="dot"></span>
+    </p>
+
+  </div>
+
+  <div class="references-grid">
+
+    @for (ref of references; track ref.name) {
+      <div class="reference-card">
+        <div class="reference-icon">
+          <i class="fa-solid" [class]="ref.icon"></i>
+        </div>
+        <h3>{{ ref.name }}</h3>
+        <p class="role">{{ ref.role }}</p>
+        <p class="company">{{ ref.company }}</p>
+        <span class="tag">Contacto disponible a petición</span>
+      </div>
+    }
+
+  </div>
+
+</section>
