@@ -460,7 +460,8 @@ margin-top: -200px !important;
 
   .about-visual{
     order:1;
-    height:320px;
+    height:auto;
+    padding:40px 0;
     margin-top:0 !important;
   }
 
@@ -493,7 +494,8 @@ margin-top: -200px !important;
   }
 
   .about-visual{
-    height:350px;
+    height:auto;
+    padding:30px 0;
   }
 
   .orbit-1{
