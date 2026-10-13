@@ -190,16 +190,37 @@
     </article>
 
     <article class="project-card" data-category="fullstack" [hidden]="!matchesProjectFilter('fullstack')">
-      <app-image-carousel class="project-carousel" [images]="erpImages"></app-image-carousel>
+      <app-image-carousel class="project-carousel" [images]="minimarketImages"></app-image-carousel>
       <div class="project-content">
         <span class="project-category">Gestión Comercial ERP</span>
         <span class="project-year">May - Jul 2025</span>
-        <h3>Sistemas Administrativos para PYMES y Hotelería</h3>
+        <h3>Sistema de Minimarket</h3>
         <h4>Proyecto universitario · Líder de equipo</h4>
-        <p>Lideré a cinco desarrolladores en la construcción de dos sistemas independientes para retail y hotelería, con módulos de ventas, compras, caja y control de accesos.</p>
+        <p>Lideré a cinco desarrolladores en la construcción de un sistema administrativo para minimarket, con módulos de ventas, compras, caja y control de accesos.</p>
         <ul>
-          <li>Desarrollé la autenticación basada en roles y los módulos de ventas y caja compartidos.</li>
-          <li>Diseñé una estructura backend Spring Boot reutilizable en ambos sistemas.</li>
+          <li>Desarrollé la autenticación basada en roles y los módulos de ventas y caja.</li>
+          <li>Diseñé una estructura backend Spring Boot reutilizable.</li>
+          <li>Coordiné ramas, pull requests y revisión de código mediante GitHub.</li>
+        </ul>
+        <div class="tech-tags"><span>Java</span><span>Spring Boot</span><span>Angular</span><span>MySQL</span></div>
+        <div class="project-actions">
+          <span class="deploy-btn disabled" aria-disabled="true">↗ Ver código</span>
+          <span class="deploy-btn disabled" aria-disabled="true">↗ Ver demo</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="project-card" data-category="fullstack" [hidden]="!matchesProjectFilter('fullstack')">
+      <app-image-carousel class="project-carousel" [images]="hotelImages"></app-image-carousel>
+      <div class="project-content">
+        <span class="project-category">Gestión Hotelera</span>
+        <span class="project-year">May - Jul 2025</span>
+        <h3>Sistema Hotelero</h3>
+        <h4>Proyecto universitario · Líder de equipo</h4>
+        <p>Sistema administrativo para hotelería, desarrollado junto a un equipo de cinco desarrolladores, con módulos de reservas, caja y control de accesos.</p>
+        <ul>
+          <li>Desarrollé la autenticación basada en roles y los módulos de caja compartidos.</li>
+          <li>Reutilicé la estructura backend Spring Boot del sistema de minimarket.</li>
           <li>Coordiné ramas, pull requests y revisión de código mediante GitHub.</li>
         </ul>
         <div class="tech-tags"><span>Java</span><span>Spring Boot</span><span>Angular</span><span>MySQL</span></div>

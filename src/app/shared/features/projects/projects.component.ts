@@ -37,9 +37,10 @@ export class ProjectsComponent {
   alquilaFacilImages: string[] = [
     'assets/alquillafacil.jpeg'
   ];
-  erpImages: string[] = [
+  minimarketImages: string[] = [
     'assets/login_minimarket.jpeg'
   ];
+  hotelImages: string[] = [];
 
   setProjectFilter(filter: string): void {
     this.activeProjectFilter = filter;
