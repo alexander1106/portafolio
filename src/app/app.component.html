@@ -1,6 +1,10 @@
-<div class="page-loader" *ngIf="isLoading">
-	<div class="spinner" aria-hidden="true"></div>
-	<p>Cargando...</p>
+<div class="page-loader" *ngIf="isLoading" role="status" aria-label="Cargando portafolio">
+	<div class="terminal" aria-hidden="true">
+		<span class="prompt">&gt;_</span>
+		<span class="typed">Cargando portafolio</span>
+		<span class="cursor"></span>
+	</div>
+	<div class="progress" aria-hidden="true"><span></span></div>
 </div>
 
 <router-outlet *ngIf="!isLoading"></router-outlet>

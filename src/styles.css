@@ -4,22 +4,22 @@
    DESIGN TOKENS — usados por navbar, footer y secciones
 ==================================================== */
 :root {
-  --accent: #22c55e;
-  --accent-strong: #16a34a;
-  --accent-soft: #86efac;
-  --accent-surface: rgba(34, 197, 94, 0.1);
-  --accent-border: rgba(34, 197, 94, 0.18);
-  --accent-glow: rgba(34, 197, 94, 0.25);
+  --accent: #00c896;
+  --accent-strong: #00a97b;
+  --accent-soft: #3ddbb4;
+  --accent-surface: rgba(0, 200, 150, 0.1);
+  --accent-border: rgba(0, 200, 150, 0.18);
+  --accent-glow: rgba(0, 200, 150, 0.2);
 
-  --bg-base: #020617;
-  --bg-surface: rgba(8, 18, 38, 0.92);
-  --bg-surface-soft: rgba(15, 23, 42, 0.72);
+  --bg-base: #050607;
+  --bg-surface: rgba(9, 10, 12, 0.94);
+  --bg-surface-soft: rgba(20, 21, 24, 0.84);
 
   --text-primary: #f8fafc;
   --text-muted: #94a3b8;
   --text-faint: #64748b;
 
-  --border-subtle: #1e293b;
+  --border-subtle: #202227;
 
   --radius-sm: 8px;
   --radius-md: 14px;
@@ -31,12 +31,12 @@
 }
 
 body.light-theme {
-  --accent: #16a34a;
-  --accent-strong: #15803d;
-  --accent-soft: #166534;
-  --accent-surface: rgba(34, 197, 94, 0.08);
-  --accent-border: rgba(34, 197, 94, 0.25);
-  --accent-glow: rgba(34, 197, 94, 0.18);
+  --accent: #00a97b;
+  --accent-strong: #008b65;
+  --accent-soft: #047857;
+  --accent-surface: rgba(0, 200, 150, 0.08);
+  --accent-border: rgba(0, 169, 123, 0.25);
+  --accent-glow: rgba(0, 169, 123, 0.15);
 
   --bg-base: #ffffff;
   --bg-surface: #ffffff;
@@ -60,45 +60,120 @@ html {
 }
 
 body {
-  background: #030712;
-  color: #000000;
+  background: var(--bg-base);
+  color: var(--text-primary);
   min-height: 100vh;
+  font-size: 17px;
   font-family: var(--font-base);
   transition: background-color 0.35s ease, color 0.35s ease;
 }
 
-
-/* GRID TECNOLÓGICO */
-
-body::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-
-  background:
-    linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px);
-
-  background-size: 50px 50px;
-
-  opacity: .3;
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 }
 
-body::after {
-  content: "";
-  position: absolute;
-  inset: 0;
+@media (min-width: 821px) and (max-height: 800px) {
+  app-home .hero {
+    min-height: calc(100svh - 76px);
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+  }
 
-  background:
-    radial-gradient(circle at 15% 20%,
-      rgba(34,197,94,.18),
-      transparent 30%),
+  app-home .hero-content {
+    min-height: calc(100svh - 100px);
+    gap: clamp(1.5rem, 3vw, 3rem);
+  }
 
-    radial-gradient(circle at 85% 70%,
-      rgba(34,197,94,.18),
-      transparent 35%);
+  app-home .welcome-badge {
+    margin-bottom: 1rem;
+    padding: 0.42rem 0.8rem;
+    font-size: 0.78rem;
+  }
 
-  pointer-events: none;
+  app-home .eyebrow {
+    margin-bottom: 0.4rem;
+    font-size: 0.9rem;
+  }
+
+  app-home .hero-title {
+    font-size: clamp(2.8rem, 4.2vw, 3.8rem);
+  }
+
+  app-home .hero-tags {
+    gap: 0.5rem 0.8rem;
+    margin: 1rem 0 0.8rem;
+    font-size: 0.82rem;
+  }
+
+  app-home .description {
+    font-size: 0.94rem;
+    line-height: 1.6;
+  }
+
+  app-home .hero-buttons {
+    gap: 0.6rem;
+    margin-top: 1.1rem;
+  }
+
+  app-home .btn {
+    min-height: 42px;
+    padding: 0.6rem 0.9rem;
+    font-size: 0.86rem;
+  }
+
+  app-home .hero-stats {
+    gap: 0.6rem;
+    margin-top: 1rem;
+    padding-top: 0.75rem;
+  }
+
+  app-home .stat {
+    gap: 0.25rem;
+  }
+
+  app-home .stat span {
+    font-size: 0.74rem;
+  }
+
+  app-home .editor-column {
+    padding-top: 0;
+  }
+
+  app-home .editor-label {
+    margin-bottom: 0.65rem;
+    font-size: 0.84rem;
+  }
+
+  app-home .window-toolbar {
+    min-height: 44px;
+  }
+
+  app-home .editor-tab {
+    min-height: 40px;
+    padding-top: 0.45rem;
+    padding-bottom: 0.45rem;
+    font-size: 0.78rem;
+  }
+
+  app-home .editor-body {
+    min-height: 0;
+    max-height: clamp(210px, calc(100svh - 360px), 350px);
+    padding: 0.9rem 1.1rem;
+  }
+
+  app-home .editor-body pre {
+    font-size: 0.8rem;
+    line-height: 1.65;
+  }
+
+  app-home .editor-statusbar {
+    min-height: 29px;
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+    font-size: 0.68rem;
+  }
 }
 
 
@@ -109,4 +184,154 @@ body::after {
 #certifications,
 #contact {
   scroll-margin-top: 90px;
+}
+
+app-home .text-content > * {
+  animation: hero-rise 700ms both;
+}
+
+app-home .text-content > :nth-child(1) {
+  animation-delay: 80ms;
+}
+
+app-home .text-content > :nth-child(2) {
+  animation-delay: 160ms;
+}
+
+app-home .text-content > :nth-child(3) {
+  animation-delay: 240ms;
+}
+
+app-home .text-content > :nth-child(4) {
+  animation-delay: 320ms;
+}
+
+app-home .text-content > :nth-child(5) {
+  animation-delay: 400ms;
+}
+
+app-home .text-content > :nth-child(6) {
+  animation-delay: 480ms;
+}
+
+app-home .editor-column {
+  animation: editor-enter 900ms 280ms both;
+}
+
+app-home .dot {
+  animation: status-pulse 2.2s ease-in-out infinite;
+}
+
+app-home .code-window {
+  transition: border-color 220ms ease, box-shadow 220ms ease;
+}
+
+app-home .code-window:hover {
+  border-color: rgba(0, 200, 150, 0.4);
+  box-shadow: 0 28px 90px rgba(0, 0, 0, 0.48), 0 0 45px rgba(0, 200, 150, 0.09);
+}
+
+@keyframes hero-rise {
+  from {
+    opacity: 0;
+    translate: 0 20px;
+  }
+
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+
+@keyframes editor-enter {
+  from {
+    opacity: 0;
+    translate: 18px 0;
+    scale: 0.985;
+  }
+
+  to {
+    opacity: 1;
+    translate: 0 0;
+    scale: 1;
+  }
+}
+
+@keyframes status-pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 8px rgba(0, 200, 150, 0.45);
+  }
+
+  50% {
+    box-shadow: 0 0 16px rgba(0, 200, 150, 0.95);
+  }
+}
+
+@keyframes content-card-enter {
+  from {
+    opacity: 0;
+    translate: 0 18px;
+  }
+
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+
+app-about.reveal.show .service-card,
+app-about.reveal.show .skill-card,
+app-projects.reveal.show .experience-card,
+app-projects.reveal.show .project-card,
+app-achievements.reveal.show .achievement-card,
+app-references.reveal.show .reference-card {
+  animation: content-card-enter 650ms cubic-bezier(0.2, 0.7, 0.25, 1) both;
+}
+
+app-about.reveal.show .service-card:nth-child(2),
+app-about.reveal.show .skill-card:nth-child(2),
+app-projects.reveal.show .experience-card:nth-child(2),
+app-projects.reveal.show .project-card:nth-child(2),
+app-achievements.reveal.show .achievement-card:nth-child(2),
+app-references.reveal.show .reference-card:nth-child(2) {
+  animation-delay: 80ms;
+}
+
+app-about.reveal.show .service-card:nth-child(3),
+app-about.reveal.show .skill-card:nth-child(3),
+app-projects.reveal.show .experience-card:nth-child(3),
+app-projects.reveal.show .project-card:nth-child(3),
+app-achievements.reveal.show .achievement-card:nth-child(3),
+app-references.reveal.show .reference-card:nth-child(3) {
+  animation-delay: 160ms;
+}
+
+app-about.reveal.show .service-card:nth-child(4),
+app-about.reveal.show .skill-card:nth-child(4),
+app-projects.reveal.show .experience-card:nth-child(4),
+app-projects.reveal.show .project-card:nth-child(4),
+app-achievements.reveal.show .achievement-card:nth-child(4),
+app-references.reveal.show .reference-card:nth-child(4) {
+  animation-delay: 240ms;
+}
+
+.navbar .logo-mark {
+  transition: transform 220ms ease, box-shadow 220ms ease;
+}
+
+.navbar .logo:hover .logo-mark {
+  transform: rotate(-8deg) scale(1.08);
+  box-shadow: 0 0 22px rgba(0, 200, 150, 0.2);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
 }

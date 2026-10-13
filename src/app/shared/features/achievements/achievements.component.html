@@ -1,162 +1,47 @@
-<section class="achievements" id="achievements">
-
-  <div class="section-header">
-
-    <div class="stack-badge">
-      RECONOCIMIENTOS
-    </div>
-
+<section class="achievements section-shell" id="achievements">
+  <header class="section-header">
+    <p class="section-kicker">&gt;_ 05. MÉRITO ACADÉMICO &amp; COMPETENCIAS</p>
     <h2>Mis <span class="color">Logros</span></h2>
-
-    <p>
-      <span class="dot"></span>
-      Reconocimientos académicos y participación en competencias tecnológicas
-      <span class="dot"></span>
+    <p class="section-description">
+      Reconocimientos al mérito académico, becas de excelencia y participación
+      en competencias de robótica e innovación.
     </p>
-
-  </div>
+  </header>
 
   <div class="achievements-grid">
+    <article class="achievement-card">
+      <header>
+        <span class="achievement-icon" aria-hidden="true">♙</span>
+        <span class="achievement-rank">Top 10%</span>
+      </header>
+      <h3>Décimo Superior &amp; Beca PRONABEC</h3>
+      <h4>Universidad Nacional de San Martín</h4>
+      <p>Reconocimiento al mérito estudiantil y adjudicatario de la Beca Permanencia del Estado Peruano.</p>
+      <footer><span>2024 - Actualidad</span><strong>Académico</strong></footer>
+    </article>
 
-    <div class="achievement-card">
-      <div class="achievement-icon">
-        <i class="fa-solid fa-award"></i>
-      </div>
-      <h3>Décimo Superior &amp; Becario PRONABEC</h3>
-      <p class="detail">Integrante del décimo superior de la carrera y beneficiario de la Beca Permanencia por mérito académico</p>
-      <span class="tag">Académico</span>
-      <span class="tag">Beca</span>
-    </div>
-
-    <div class="achievement-card">
+    <article class="achievement-card">
       <app-image-carousel [images]="torneoInternoImages"></app-image-carousel>
+      <h3>1.er Lugar: Torneo de Robótica FISI</h3>
+      <h4>FISI 2026-I (UNSM)</h4>
+      <p>Campeón del torneo interno de robótica de la Facultad de Ingeniería de Sistemas e Informática.</p>
+      <footer><span>2026</span><strong>Competencia</strong></footer>
+    </article>
 
-      <h3>Torneo Interno de Robótica – FISI 2026-I</h3>
-
-      <p class="detail">Primer lugar en el torneo interno de robótica de la FISI</p>
-      <span class="tag">Competencia</span>
-    </div>
-
-    <div class="achievement-card">
+    <article class="achievement-card">
       <app-image-carousel [images]="peruHubImages"></app-image-carousel>
+      <h3>Cuartos de Final: Robot Sumo</h3>
+      <h4>Perú Hub Digital 2026</h4>
+      <p>Clasificación a cuartos de final de la competencia nacional representando a la región San Martín.</p>
+      <footer><span>2026</span><strong>Competencia tecnológica</strong></footer>
+    </article>
 
-      <h3>Robot Sumo – Perú Hub Digital 2026</h3>
-
-      <p class="detail">Clasificación a cuartos de final en la competencia Robot Sumo del Perú Hub Digital 2026</p>
-      <span class="tag">Competencia</span>
-    </div>
-
-    <div class="achievement-card">
+    <article class="achievement-card">
       <app-image-carousel [images]="bioheartFeriaImages"></app-image-carousel>
-
-      <h3>Feria Tecnológica FISI 2025 (UNSM)</h3>
-
-      <p class="detail">Tercer lugar con el proyecto BIOHEART</p>
-      <span class="tag">Innovación</span>
-    </div>
-
-  </div>
-
-  <div class="section-header volunteer-header">
-
-    <div class="stack-badge">
-      EXPERIENCIA SOCIAL
-    </div>
-
-    <h2>Mis <span class="color">Voluntariados</span></h2>
-
-    <p>
-      <span class="dot"></span>
-      Participación activa en actividades de apoyo institucional y tecnológico
-      <span class="dot"></span>
-    </p>
-
-  </div>
-
-  <div class="achievements-grid">
-
-    <div class="achievement-card">
-      <app-image-carousel [images]="delegadoImages"></app-image-carousel>
-
-      <h3>Perú Hub Digital 2026</h3>
-
-      <p class="detail">Delegado estudiantil encargado de apoyar en actividades de coordinación, representación y participación durante el evento tecnológico</p>
-      <span class="tag">Delegado Estudiantil</span>
-    </div>
-
-    <div class="achievement-card">
-      <app-image-carousel [images]="pronabecImages"></app-image-carousel>
-
-      <h3>PRONABEC – Jul., Nov. – Dic. 2024</h3>
-
-      <p class="detail">Operador informático encargado del soporte técnico a postulantes, verificación y supervisión de equipos, monitoreo del desarrollo de los exámenes y resolución de incidencias para asegurar un proceso evaluativo seguro y eficiente</p>
-      <span class="tag">Operador Informático</span>
-    </div>
-
-  </div>
-
-  <div class="section-header" id="certifications">
-
-    <div class="stack-badge">
-      CERTIFICACIONES
-    </div>
-
-    <h2>Certificaciones <span class="color">Profesionales</span></h2>
-
-    <p>
-      <span class="dot"></span>
-      Formación continua en desarrollo de software e inteligencia artificial
-      <span class="dot"></span>
-    </p>
-
-  </div>
-
-  <div class="achievements-grid">
-
-    <div class="achievement-card">
-      <div class="achievement-icon">
-        <i class="fa-brands fa-microsoft"></i>
-      </div>
-      <h3>Microsoft Learn Student Ambassador</h3>
-      <p class="detail">Microsoft</p>
-      <span class="tag">2026</span>
-    </div>
-
-    <div class="achievement-card">
-      <app-image-carousel class="cert-carousel" [images]="iaImages"></app-image-carousel>
-
-      <h3>Curso de Inteligencia Artificial</h3>
-
-      <p class="detail">Universidad Nacional de San Martín (UNSM)</p>
-      <span class="tag">Oct – Nov 2025</span>
-    </div>
-
-    <div class="achievement-card">
-      <app-image-carousel class="cert-carousel" [images]="oracleImages"></app-image-carousel>
-
-      <h3>Especialización en Desarrollo Backend</h3>
-
-      <p class="detail">Oracle Next Education</p>
-      <span class="tag">Abr – Oct 2023</span>
-    </div>
-
-    <div class="achievement-card">
-      <app-image-carousel class="cert-carousel" [images]="googleImages"></app-image-carousel>
-
-      <h3>Curso de Desarrollo Web</h3>
-
-      <p class="detail">Google Actívate</p>
-      <span class="tag">May – Jul 2023</span>
-    </div>
-
-    <div class="achievement-card">
-      <app-image-carousel class="cert-carousel" [images]="htmlCssImages"></app-image-carousel>
-
-      <h3>Diseño Web con HTML5 y CSS</h3>
-
-      <p class="detail">Fundación Telefónica Movistar</p>
-      <span class="tag">Jul – Ago 2022</span>
-    </div>
-
+      <h3>3.er Lugar: Feria Tecnológica FISI</h3>
+      <h4>Feria Tecnológica UNSM 2025</h4>
+      <p>Tercer puesto en la exhibición científica y tecnológica con BIOHEART, proyecto de detección de arritmias con IA.</p>
+      <footer><span>2025</span><strong>Innovación &amp; Salud</strong></footer>
+    </article>
   </div>
 </section>

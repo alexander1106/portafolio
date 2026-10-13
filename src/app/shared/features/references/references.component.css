@@ -1,192 +1,283 @@
-.references {
-  position: relative;
-  padding: 60px 8% 100px;
-  background: #020617;
+:host {
+  display: block;
   color: #f8fafc;
+  background: #050607;
 }
 
-/* HEADER */
+.section-shell {
+  padding: 5.8rem 7.5%;
+  border-bottom: 1px solid #17191d;
+  background: #050607;
+}
+
+.references-heading {
+  display: flex;
+  width: min(100%, 1450px);
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 2rem;
+  margin: 0 auto 2.5rem;
+}
+
 .section-header {
-  text-align: center;
-  margin-bottom: 70px;
+  flex: 1 1 500px;
 }
 
-.stack-badge {
-  width: max-content;
-  margin: 0 auto 16px;
-  padding: 10px 26px;
-  border-radius: 999px;
-  color: #22c55e;
-  font-size: 0.85rem;
+.section-kicker {
+  margin: 0 0 0.8rem;
+  color: #00c896;
+  font-family: "Consolas", "Courier New", monospace;
+  font-size: 0.73rem;
   font-weight: 700;
-  letter-spacing: 2px;
-  border: 1px solid rgba(34, 197, 94, 0.25);
-  background: rgba(34, 197, 94, 0.05);
+  letter-spacing: 0.08em;
 }
 
 .section-header h2 {
-  color: white;
-  font-size: clamp(2.5rem, 5vw, 4rem);
-  font-weight: 800;
-  margin-bottom: 12px;
+  margin: 0 0 0.7rem;
+  color: #f8fafc;
+  font-size: clamp(2.15rem, 4vw, 3.3rem);
+  font-weight: 750;
+  letter-spacing: -0.055em;
+  line-height: 1.08;
 }
 
-.section-header h2 .color {
-  color: #22c55e;
+.section-header h2 span {
+  color: #00c896;
 }
 
-.section-header p {
-  color: #cbd5e1;
+.section-description {
+  max-width: 680px;
+  margin: 0;
+  color: #a7b1c1;
+  font-size: 0.95rem;
+  line-height: 1.75;
+}
+
+.reference-tabs {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 12px;
-  flex-wrap: wrap;
+  max-width: 100%;
+  flex: 0 1 auto;
+  gap: 0.2rem;
+  padding: 0.25rem;
+  border: 1px solid #24262b;
+  border-radius: 10px;
+  background: #121316;
 }
 
-.dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: #22c55e;
+.reference-tabs button {
+  padding: 0.58rem 0.75rem;
+  border: 0;
+  border-radius: 7px;
+  background: transparent;
+  color: #a4adba;
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.7rem;
+  white-space: nowrap;
 }
 
-/* GRID */
+.reference-tabs button.active {
+  background: #00c896;
+  color: #03110d;
+  font-weight: 700;
+}
+
 .references-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 30px;
-  max-width: 1200px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+  width: min(100%, 1450px);
   margin: 0 auto;
 }
 
-/* TARJETAS */
 .reference-card {
-  position: relative;
-  padding: 32px;
-  text-align: center;
-  overflow: hidden;
-  border-radius: 28px;
-  background: linear-gradient(180deg, rgba(8, 18, 38, 0.98), rgba(2, 6, 23, 0.98));
-  border: 1px solid rgba(34, 197, 94, 0.18);
-  transition: transform 0.4s, border-color 0.4s, box-shadow 0.4s;
-  backdrop-filter: blur(20px);
-}
-
-.reference-card::before {
-  content: "";
-  position: absolute;
-  top: -120px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 250px;
-  height: 250px;
-  background: radial-gradient(circle, rgba(34, 197, 94, 0.18), transparent 70%);
-  pointer-events: none;
-}
-
-.reference-card::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 80%;
-  height: 3px;
-  border-radius: 999px;
-  background: linear-gradient(90deg, transparent, #22c55e, #4ade80, transparent);
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  padding: 1.2rem;
+  border: 1px solid #1d1f24;
+  border-radius: 15px;
+  background: #090a0c;
+  transition: transform 180ms ease, border-color 180ms ease;
 }
 
 .reference-card:hover {
-  transform: translateY(-10px);
-  border-color: #22c55e;
-  box-shadow: 0 0 20px rgba(34, 197, 94, 0.15), 0 0 50px rgba(34, 197, 94, 0.08);
+  transform: translateY(-4px);
+  border-color: rgba(0, 200, 150, 0.38);
 }
 
-/* ICONO */
-.reference-icon {
-  width: 80px;
-  height: 80px;
-  margin: 0 auto 22px;
-  border-radius: 22px;
+.reference-card header {
   display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: 2rem;
-  color: #22c55e;
-  background: linear-gradient(180deg, rgba(34, 197, 94, 0.18), rgba(34, 197, 94, 0.08));
-  border: 1px solid rgba(34, 197, 94, 0.25);
-  box-shadow: 0 0 25px rgba(34, 197, 94, 0.12);
+  justify-content: flex-start;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
 }
 
-/* TEXTO */
+.card-date {
+  padding: 0.3rem 0.45rem;
+  border-radius: 4px;
+  background: #17191c;
+  color: #a9b4c2;
+  font-family: "Consolas", "Courier New", monospace;
+  font-size: 0.61rem;
+}
+
 .reference-card h3 {
-  font-size: 1.1rem;
-  line-height: 1.4;
-  margin-bottom: 6px;
-  color: white;
-}
-
-.reference-card .role {
+  margin: 0 0 0.3rem;
+  color: #f3f5f7;
   font-size: 0.9rem;
-  color: #22c55e;
-  font-weight: 600;
-  margin-bottom: 2px;
+  line-height: 1.45;
 }
 
-.reference-card .company {
-  font-size: 0.9rem;
-  color: #94a3b8;
-  margin-bottom: 16px;
+.reference-card h4 {
+  margin: 0 0 0.75rem;
+  color: #00c896;
+  font-size: 0.7rem;
+  font-weight: 650;
+  line-height: 1.5;
 }
 
-.reference-card .tag {
-  display: inline-flex;
+.reference-card > p {
+  margin: 0 0 1rem;
+  color: #9ea9b8;
+  font-size: 0.72rem;
+  line-height: 1.65;
+}
+
+.reference-card footer {
+  display: flex;
   align-items: center;
-  padding: 6px 16px;
-  border-radius: 999px;
-  font-size: 0.78rem;
-  font-weight: 700;
-  color: #22c55e;
-  background: rgba(34, 197, 94, 0.08);
-  border: 1px solid rgba(34, 197, 94, 0.2);
+  justify-content: space-between;
+  gap: 0.45rem;
+  margin-top: auto;
+  padding-top: 0.85rem;
+  border-top: 1px solid #1c1e22;
+  color: #788495;
+  font-family: "Consolas", "Courier New", monospace;
+  font-size: 0.61rem;
 }
 
-/* RESPONSIVE */
-@media (max-width: 600px) {
-  .references {
-    padding: 80px 6%;
+.reference-card footer strong,
+.reference-card footer a {
+  color: #00c896;
+  font-size: 0.62rem;
+  text-align: right;
+  text-decoration: none;
+}
+
+.reference-card footer a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 1120px) {
+  .section-shell {
+    padding-right: 5%;
+    padding-left: 5%;
+  }
+
+  .references-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .references-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
-/* LIGHT THEME */
-:host-context(.light-theme) .references {
-  background: #ffffff;
+@media (max-width: 580px) {
+  .section-shell {
+    padding: 4rem 1.1rem;
+  }
+
+  .section-header h2 {
+    font-size: 2.2rem;
+  }
+
+  .section-description {
+    font-size: 0.88rem;
+  }
+
+  .reference-tabs {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr;
+  }
+
+  .reference-tabs button {
+    text-align: left;
+  }
+
+  .references-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+:host-context(.light-theme) {
   color: #0f172a;
+  background: #fff;
 }
 
-:host-context(.light-theme) .section-header h2 {
-  color: #0f172a;
+:host-context(.light-theme) .section-shell {
+  border-bottom-color: #e2e8f0;
+  background: #fff;
 }
 
-:host-context(.light-theme) .section-header p {
-  color: #475569;
-}
-
-:host-context(.light-theme) .reference-card {
-  background: linear-gradient(180deg, #ffffff, #f8fafc);
-  border-color: #cbd5e1;
-}
-
-:host-context(.light-theme) .reference-card:hover {
-  border-color: #22c55e;
-  box-shadow: 0 10px 25px rgba(34, 197, 94, 0.15);
-}
-
+:host-context(.light-theme) .section-header h2,
 :host-context(.light-theme) .reference-card h3 {
   color: #0f172a;
 }
 
-:host-context(.light-theme) .reference-card .company {
+:host-context(.light-theme) .section-description,
+:host-context(.light-theme) .reference-card > p {
   color: #475569;
+}
+
+:host-context(.light-theme) .reference-card {
+  border-color: #dbe1e8;
+  background: #fff;
+}
+
+:host-context(.light-theme) .card-date {
+  background: #f1f5f9;
+  color: #475569;
+}
+
+.section-description {
+  font-size: 1.08rem;
+}
+
+.reference-tabs button {
+  font-size: 0.8rem;
+}
+
+.card-date {
+  font-size: 0.72rem;
+}
+
+.reference-card h3 {
+  font-size: 1.05rem;
+}
+
+.reference-card h4 {
+  font-size: 0.84rem;
+}
+
+.reference-card > p {
+  font-size: 0.88rem;
+  line-height: 1.75;
+}
+
+.reference-card footer,
+.reference-card footer strong,
+.reference-card footer a {
+  font-size: 0.72rem;
+}
+
+@media (max-width: 580px) {
+  .section-description {
+    font-size: 0.98rem;
+  }
 }

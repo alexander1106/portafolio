@@ -13,8 +13,13 @@ export class AppComponent implements OnInit {
   isLoading = true;
 
   ngOnInit(): void {
+    if ('scrollRestoration' in history) {
+      history.scrollRestoration = 'manual';
+    }
+    window.scrollTo(0, 0);
+
     setTimeout(() => {
       this.isLoading = false;
-    },1000);
+    }, 1400);
   }
 }

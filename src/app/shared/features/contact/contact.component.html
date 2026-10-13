@@ -1,48 +1,141 @@
-<section class="contact" id="contact">
-  <div class="contact-container">
-    <div class="contact-info">
-      <p class="contact-kicker">Hablemos</p>
-      <h2>Convierte tu idea en algo real</h2>
-      <p class="contact-copy">
-        ¿Tienes una oportunidad laboral, proyecto o consulta?
-        Escribeme y te respondere lo antes posible.
-      </p>
+<section class="contact section-shell" id="contact">
+  <header class="section-header">
+    <p class="section-kicker">&gt;_ 07. COMUNICACIÓN DIRECTA</p>
+    <h2>Convierte tu idea en <span>algo real</span></h2>
+    <p class="section-description">
+      ¿Tienes una vacante laboral, proyecto de desarrollo o consulta técnica?
+      Escríbeme y responderé a la brevedad.
+    </p>
+  </header>
 
-      <div class="contact-tags">
-        <span>Web Apps</span>
-        <span>Mobile</span>
-        <span>APIs</span>
+  <div class="contact-container">
+    <div class="contact-direct">
+      <article class="contact-card">
+        <div class="contact-card-heading">
+          <span class="contact-icon" aria-hidden="true">☎</span>
+          <div>
+            <h3>Escríbeme por WhatsApp</h3>
+            <p>+51 900 414 695</p>
+          </div>
+        </div>
+        <div class="contact-card-actions">
+          <a
+            class="direct-button whatsapp-button"
+            href="https://wa.me/51900414695?text=Hola%20Alexander%2C%20vi%20tu%20portafolio%20y%20me%20gustar%C3%ADa%20conversar."
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Iniciar chat directo <span aria-hidden="true">↗</span>
+          </a>
+          <button
+            class="copy-contact"
+            type="button"
+            aria-label="Copiar número de WhatsApp"
+            (click)="copyContact('51900414695', 'whatsapp')"
+          >
+            {{ copiedContact === 'whatsapp' ? '✓' : copyError === 'whatsapp' ? '!' : '▢' }}
+          </button>
+        </div>
+      </article>
+
+      <article class="contact-card">
+        <div class="contact-card-heading">
+          <span class="contact-icon" aria-hidden="true">✉</span>
+          <div>
+            <h3>Escríbeme un correo</h3>
+            <p>gaslacmasalexander6&#64;gmail.com</p>
+          </div>
+        </div>
+        <div class="contact-card-actions">
+          <a
+            class="direct-button"
+            href="mailto:gaslacmasalexander6@gmail.com?subject=Contacto%20desde%20mi%20portafolio"
+          >
+            Abrir cliente de correo <span aria-hidden="true">↗</span>
+          </a>
+          <button
+            class="copy-contact"
+            type="button"
+            aria-label="Copiar correo electrónico"
+            (click)="copyContact('gaslacmasalexander6@gmail.com', 'email')"
+          >
+            {{ copiedContact === 'email' ? '✓' : copyError === 'email' ? '!' : '▢' }}
+          </button>
+        </div>
+      </article>
+
+      <span class="visually-hidden" aria-live="polite">{{ copyStatus }}</span>
+
+      <div class="availability">
+        <span>⌖ Tarapoto, San Martín, Perú</span>
+        <strong>Respuesta en &lt; 24h</strong>
+      </div>
+    </div>
+
+    <form class="contact-form" #contactForm="ngForm" (ngSubmit)="sendToWhatsApp()">
+      <h3>Envíame un mensaje rápido</h3>
+      <p class="form-description">Completa este formulario y te conectaré al instante con mi canal prioritario.</p>
+
+      <div class="field-row">
+        <label>
+          <span>Tu Nombre o Empresa</span>
+          <input
+            type="text"
+            name="contactName"
+            [(ngModel)]="contactName"
+            required
+            maxlength="100"
+            placeholder="Ej. Martín / JJ Ingenieros"
+          >
+        </label>
+        <label>
+          <span>Tu Correo de Contacto</span>
+          <input
+            type="email"
+            name="contactEmail"
+            [(ngModel)]="contactEmail"
+            required
+            maxlength="150"
+            placeholder="tucorreo@ejemplo.com"
+          >
+        </label>
       </div>
 
-
-    </div>
-
-    <div class="contact-direct">
-
-      <a
-        class="contact-channel whatsapp"
-        href="https://wa.me/51900414695?text=Hola%20Alexander%2C%20vi%20tu%20portafolio%20y%20me%20gustar%C3%ADa%20conversar%20sobre%20una%20oportunidad."
-        target="_blank"
-        rel="noopener noreferrer">
-        <i class="fa-brands fa-whatsapp"></i>
-        <div class="channel-text">
-          <h3>Escríbeme por WhatsApp</h3>
-          <p>+51 900 414 695</p>
+      <fieldset class="reason-field">
+        <legend>Motivo de Consulta</legend>
+        <div class="reason-options">
+          @for (reason of consultationReasons; track reason) {
+            <label [class.selected]="consultationType === reason">
+              <input
+                type="radio"
+                name="consultationType"
+                [value]="reason"
+                [(ngModel)]="consultationType"
+              >
+              {{ reason }}
+            </label>
+          }
         </div>
-        <span class="arrow" aria-hidden="true">→</span>
-      </a>
+      </fieldset>
 
-      <a
-        class="contact-channel email"
-        href="mailto:gaslacmasalexander6@gmail.com?subject=Oportunidad%20laboral">
-        <i class="fa-solid fa-envelope"></i>
-        <div class="channel-text">
-          <h3>Escríbeme un correo</h3>
-          <p>gaslacmasalexander6&#64;gmail.com</p>
-        </div>
-        <span class="arrow" aria-hidden="true">→</span>
-      </a>
+      <label class="message-field">
+        <span>Mensaje o Detalles</span>
+        <textarea
+          name="message"
+          [(ngModel)]="message"
+          required
+          maxlength="1500"
+          rows="4"
+          placeholder="Hola Alexander, nos gustaría coordinar una entrevista sobre la vacante..."
+        ></textarea>
+      </label>
 
-    </div>
+      <div class="form-footer">
+        <span>🔒 Canal directo y privado con José Alexander Gaslac Mas.</span>
+        <button type="submit" [disabled]="contactForm.invalid">
+          <span aria-hidden="true">➤</span> Enviar a WhatsApp
+        </button>
+      </div>
+    </form>
   </div>
 </section>

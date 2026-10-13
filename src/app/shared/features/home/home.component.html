@@ -1,121 +1,120 @@
 <app-navbar></app-navbar>
 
-<section class="hero">
+<main>
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="hero-content">
+      <div class="text-content">
+        <p class="welcome-badge">
+          <span aria-hidden="true"></span>
+          Backend Java Junior · Décimo superior · UNSM
+        </p>
 
-  <div class="hero-content">
+        <p class="eyebrow">Jose Alexander Gaslac Mas</p>
 
-    <!-- IZQUIERDA -->
-    <div class="text-content">
+        <h1 class="hero-title" id="hero-title">
+          Backend Developer
+          <span>&amp; Java Junior</span>
+        </h1>
 
-      <div class="welcome-badge">
-        <span class="dot"></span>
-        ¡BIENVENIDO A MI PORTAFOLIO!
+        <div class="hero-tags" aria-label="Áreas de especialidad">
+          <span class="tag-backend">&lt;/&gt; Java  · Spring Boot · APIs REST</span>
+          <span class="tag-cloud">☁ SQL Server · Azure · Docker</span>
+          <span class="tag-ai">✳ Backend &amp; servicios web</span>
+        </div>
+
+        <p class="description">
+          Estudiante de décimo ciclo de Ingeniería de Sistemas e Informática en
+          la UNSM, décimo superior y becario PRONABEC. Tengo un año de experiencia
+          en prácticas desarrollando sistemas web e integrando APIs REST.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#projects" class="btn btn-primary">
+            Ver proyectos <span aria-hidden="true">→</span>
+          </a>
+          <a href="#contact" class="btn btn-outline">
+            <span aria-hidden="true">↗</span> Contactar
+          </a>
+          <a href="https://drive.google.com/drive/folders/10pOMq1qYH16mkswSCuZYbu1TxsD5EYC0?hl=es" target="_blank" rel="noopener" class="btn btn-dark">
+            <span aria-hidden="true">↓</span> Descargar CV
+          </a>
+        </div>
+
+        <div class="hero-stats" aria-label="Datos destacados">
+          <div class="stat">
+            <strong>X Ciclo</strong>
+            <span>Formación universitaria</span>
+          </div>
+          <div class="stat">
+            <strong>Décimo</strong>
+            <span>Superior académico</span>
+          </div>
+          <div class="stat">
+            <strong>PRONABEC</strong>
+            <span>Beca Permanencia</span>
+          </div>
+          <div class="stat">
+            <strong>1.er lugar</strong>
+            <span>Torneo de Robótica FISI</span>
+          </div>
+        </div>
       </div>
 
-      <h1 class="hero-title">
-        Hola soy
-        <span>Alexander Gaslac</span>
-      </h1>
+      <div class="editor-column">
+        <div class="editor-label">
+          <span class="editor-status" aria-hidden="true"></span>
+          Espacio de desarrollo
+        </div>
 
-      <div class="hero-tags">
-       <span>⚡ Full Stack Developer</span>
-  <span>☁️ Cloud & DevOps</span>
-  <span>🧠 AI Enthusiast</span>
+        <section class="code-window" aria-label="Vista previa de código">
+          <div class="window-toolbar">
+            <div class="window-controls" aria-hidden="true">
+              <span></span><span></span><span></span>
+            </div>
+            <span class="window-path">developer-workspace / alexander-gaslac</span>
+            <button
+              class="copy-button"
+              type="button"
+              (click)="copyCode()"
+              [attr.aria-label]="copyMessage || 'Copiar código'"
+            >
+              <span aria-hidden="true">▢</span>
+              {{ copyMessage || 'Copiar' }}
+            </button>
+          </div>
+
+          <div class="editor-tabs" role="tablist" aria-label="Archivos de ejemplo">
+            @for (file of files; track file.name; let index = $index) {
+              <button
+                class="editor-tab"
+                [class.active]="activeFileIndex === index"
+                type="button"
+                role="tab"
+                [attr.aria-selected]="activeFileIndex === index"
+                (click)="selectFile(index)"
+              >
+                <span aria-hidden="true">{{ file.icon }}</span>
+                {{ file.name }}
+              </button>
+            }
+          </div>
+
+          <div class="editor-body" role="tabpanel">
+            <pre><code>{{ activeFile.content }}</code></pre>
+          </div>
+
+          <div class="editor-statusbar">
+            <span><b>●</b> UTF-8</span>
+            <span>Git: main*</span>
+            <span>{{ activeFile.language }}</span>
+            <span class="ready">Ready</span>
+          </div>
+        </section>
       </div>
-
-      <p class="description">
-  Desarrollo aplicaciones web, APIs REST y soluciones basadas en Inteligencia Artificial utilizando Java, Spring Boot, Angular y tecnologías Cloud.
-      </p>
-
-      <div class="hero-buttons">
-
-        <a href="#projects" class="btn btn-outline">
-          Ver proyectos →
-        </a>
-
-        <a href="#contact" class="btn btn-primary">
-          Contactarme
-        </a>
-
-        <a
-          href="https://drive.google.com/drive/folders/10pOMq1qYH16mkswSCuZYbu1TxsD5EYC0?usp=sharing"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="btn btn-dark"
-        >
-          Descargar CV
-        </a>
-
-      </div>
-
     </div>
+  </section>
+</main>
 
-    <!-- DERECHA -->
-<div class="image-wrapper">
-
-  <div class="tech-circle circle-1"></div>
-  <div class="tech-circle circle-2"></div>
-  <div class="tech-circle circle-3"></div>
-
-  <div class="particle p1"></div>
-  <div class="particle p2"></div>
-  <div class="particle p3"></div>
-  <div class="particle p4"></div>
-  <div class="particle p5"></div>
-
-  <div class="floating-code code-1">&lt;/&gt;</div>
-<div class="floating-code code-2">&#123; &#125;</div>  <div class="floating-code code-3">+</div>
-
-  <img
-    src="/assets/yo_caricatura.png"
-    alt="Alexander Gaslac">
-
-</div>
-  </div>
-
-  <!--
-
-  <div class="hero-features">
-
-    <div class="feature-card">
-      <div class="icon">&lt;/&gt;</div>
-
-      <div>
-        <h3>Desarrollo Backend</h3>
-        <p>Java · Spring Boot · REST API</p>
-      </div>
-    </div>
-
-    <div class="feature-card">
-      <div class="icon">🧠</div>
-
-      <div>
-        <h3>Inteligencia Artificial</h3>
-        <p>Machine Learning · IA</p>
-      </div>
-    </div>
-
-    <div class="feature-card">
-      <div class="icon">☁</div>
-
-      <div>
-        <h3>Tecnologías</h3>
-        <p>MySQL · Docker · Git</p>
-      </div>
-    </div>
-
-    <div class="feature-card">
-      <div class="icon">🚀</div>
-
-      <div>
-        <h3>Enfoque</h3>
-        <p>Escalabilidad · Innovación</p>
-      </div>
-    </div>
-
-  </div>
- CARDS INFERIORES -->
-</section>
 <app-about class="reveal"></app-about>
 <app-projects class="reveal"></app-projects>
 <app-achievements class="reveal"></app-achievements>

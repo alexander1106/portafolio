@@ -35,6 +35,11 @@ export class NavbarComponent implements OnInit {
     this.menuOpen = false;
   }
 
+  goHome() {
+    this.closeMenu();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
   goTo(event: Event, sectionId: string) {
     event.preventDefault();
     this.closeMenu();

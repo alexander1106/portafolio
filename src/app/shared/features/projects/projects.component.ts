@@ -8,6 +8,14 @@ import { ImageCarouselComponent } from '../../components/image-carousel/image-ca
   styleUrl: './projects.component.css'
 })
 export class ProjectsComponent {
+  readonly projectFilters = [
+    { id: 'all', label: 'Todos los Proyectos' },
+    { id: 'ai', label: 'Inteligencia Artificial' },
+    { id: 'institutional', label: 'Sistemas Institucionales' },
+    { id: 'fullstack', label: 'Full Stack & ERP' }
+  ];
+
+  activeProjectFilter = 'all';
 
   selvaFoodImages: string[] = [];
   infratechImages: string[] = [];
@@ -26,6 +34,18 @@ export class ProjectsComponent {
     'assets/inventario.jpeg',
     'assets/inventario2.png'
   ];
-  erpImages: string[] = [];
+  alquilaFacilImages: string[] = [
+    'assets/alquillafacil.jpeg'
+  ];
+  erpImages: string[] = [
+    'assets/login_minimarket.jpeg'
+  ];
 
+  setProjectFilter(filter: string): void {
+    this.activeProjectFilter = filter;
+  }
+
+  matchesProjectFilter(category: string): boolean {
+    return this.activeProjectFilter === 'all' || this.activeProjectFilter === category;
+  }
 }

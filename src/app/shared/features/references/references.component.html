@@ -1,35 +1,73 @@
-<section class="references" id="references">
+<section class="references section-shell" id="references">
+  <div class="references-heading">
+    <header class="section-header">
+      <p class="section-kicker">&gt;_ 06. VALIDACIÓN &amp; RESPALDOS</p>
+      <h2>Certificaciones &amp; <span>Referencias</span></h2>
+      <p class="section-description">
+        Formación continua certificada, vocación comunitaria y respaldo de líderes
+        en la industria de software.
+      </p>
+    </header>
 
-  <div class="section-header">
-
-    <div class="stack-badge">
-      RESPALDO PROFESIONAL
+    <div class="reference-tabs" role="tablist" aria-label="Certificaciones, voluntariados y referencias">
+      @for (tab of tabs; track tab.id) {
+        <button
+          type="button"
+          role="tab"
+          [class.active]="activeTab === tab.id"
+          [attr.aria-selected]="activeTab === tab.id"
+          (click)="selectTab(tab.id)"
+        >
+          {{ tab.label }} ({{ tab.count }})
+        </button>
+      }
     </div>
-
-    <h2>Referencias <span class="color">Laborales</span></h2>
-
-    <p>
-      <span class="dot"></span>
-      Personas que pueden dar fe de mi desempeño profesional
-      <span class="dot"></span>
-    </p>
-
   </div>
 
-  <div class="references-grid">
+  @if (activeTab === 'certifications') {
+    <div class="references-grid" role="tabpanel">
+      @for (certificate of certifications; track certificate.name) {
+        <article class="reference-card">
+          <app-image-carousel [images]="certificate.images"></app-image-carousel>
+          <h3>{{ certificate.name }}</h3>
+          <h4>{{ certificate.organization }}</h4>
+          <p>{{ certificate.description }}</p>
+          <footer>
+            <span class="card-date">{{ certificate.date }}</span>
+            <a [href]="certificate.images[0]" target="_blank" rel="noopener noreferrer">Ver certificado ↗</a>
+          </footer>
+        </article>
+      }
+    </div>
+  }
 
-    @for (ref of references; track ref.name) {
-      <div class="reference-card">
-        <div class="reference-icon">
-          <i class="fa-solid" [class]="ref.icon"></i>
-        </div>
-        <h3>{{ ref.name }}</h3>
-        <p class="role">{{ ref.role }}</p>
-        <p class="company">{{ ref.company }}</p>
-        <span class="tag">Contacto disponible a petición</span>
-      </div>
-    }
+  @if (activeTab === 'volunteering') {
+    <div class="references-grid" role="tabpanel">
+      @for (volunteer of volunteering; track volunteer.name) {
+        <article class="reference-card">
+          <app-image-carousel [images]="volunteer.images"></app-image-carousel>
+          <h3>{{ volunteer.name }}</h3>
+          <h4>{{ volunteer.organization }}</h4>
+          <p>{{ volunteer.description }}</p>
+          <footer><span class="card-date">{{ volunteer.date }}</span><strong>{{ volunteer.role }}</strong></footer>
+        </article>
+      }
+    </div>
+  }
 
-  </div>
-
+  @if (activeTab === 'references') {
+    <div class="references-grid" role="tabpanel">
+      @for (reference of references; track reference.name) {
+        <article class="reference-card">
+          <h3>{{ reference.name }}</h3>
+          <h4>{{ reference.company }}</h4>
+          <p>{{ reference.role }}</p>
+          <footer>
+            <span class="card-date">Referencia profesional</span>
+            <strong>Disponible a petición</strong>
+          </footer>
+        </article>
+      }
+    </div>
+  }
 </section>
